@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Optional chaining</title>
+</head>
+<body>
+    <script>
+        //  let mahasiswa = {"Nama" : "Basir Arsy Syams", "NIM" : "J0303211025"};
+        // mahasiswa["asal"] = "bekasi"; //Menambahkan atribut asal beserta value nya
+        // console.table(mahasiswa);
+
+        //Contoh penggunaan tipe data object bersarang
+
+        // const person = {
+        //   name: "John",
+        //     address: {
+        //      city: "Jakarta",
+        //         country: "Indonesia"
+        //     }
+        // };
+        // document.writeln(person?.address?.city);  // Jika person nullish maka tidak akan lanjut ke proses address?
+        // Jadi tanda tanya itu artinya mengecek apakah atribut tsb nullish atau tidak
+        // jika tidak nullish maka akan lanjut ke atribut diseblah kanannya
+
+        // Setiap mengakses atribut, tambahkan ? seperti person?. adress?
+        // const person = {
+        //     address : {
+        //         country : "Indonesia"
+        //     }
+        // };
+        // document.writeln(person?.address?.country);
+
+        // let person = {};
+        // document.writeln(person?.address?.country);
+
+
+        const person = {
+        name: "John",
+        address: {
+            city: "Jakarta",
+            country: "Indonesia"
+        }
+        };
+
+        // Dengan Optional Chaining
+        document.writeln(person?.address?.city)
+
+        // Tanpa optional chaining
+        let city;
+        if (person && person.address) {
+        city = person.address.city;
+        };
+
+        document.writeln(city);
+
+        // Jadi cara kerja syntax tanpa operator chaining: person bernilai true karena tidak nullish, person.address jg true krn tdk nullish
+        // true && true = true maka akan mengeksekusi syntax city = person.address.city;
+
+
+    </script>
+</body>
+</html>

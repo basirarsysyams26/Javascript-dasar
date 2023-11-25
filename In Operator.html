@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>In Operator</title>
+</head>
+<body>
+    <script>
+        let mahasiswa = {"Nama" : "Basir", "NIM" : "J0303211205"}
+
+        let result = "Nama" in mahasiswa;
+        document.writeln(result);
+        document.writeln("</br>");
+
+       // In operator undefined/null property
+        let mobil = {"nama mobil" : null, "seri mobil" : "J09090"}
+        let result1 = "nama mobil" in mobil;
+        document.writeln(result1);
+        document.writeln("</br>");
+
+        let motor = {"nama motor" : undefined, "seri mobil" : "J09090"}
+        let result2 = "nama motor" in motor;
+        document.writeln(result2);
+        document.writeln("</br>");
+
+        let a = [null, "Budi"];
+        let b = 0 in a;
+        document.writeln(b);
+
+    </script>
+</body>
+</html>

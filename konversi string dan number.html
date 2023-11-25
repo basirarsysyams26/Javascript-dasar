@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Konversi String dan Number </title>
+</head>
+<body>
+    <script>
+        // parseInt(string) adalah mengubah string menjadi integer
+        // parseFloat(strings) adalah mengubah string menjadi 
+        // Number(string) adalah mengubah string menjadi number
+        // number.toString() adalah mengubah number menjadi string
+        // integer adalah number yang bersifat bilangan bulat
+        // float adalah number yang bersifat bilangan pecahan
+        // number adalah number yang bersifat bilangan bulat dan pecahan
+
+        let c = parseInt("10");
+        let d = 10;
+        let result = c === d;
+        document.writeln(result);
+        document.writeln("<br>");
+
+
+        let a = Number("salah");
+        let b = 5;
+        document.writeln(a + b);
+
+        document.writeln(`<p>${parseInt("15.1")}</p>`);
+        document.writeln(`<p>${parseFloat("15.1")}</p>`);
+        document.writeln(`<p>${parseInt("15.1kkk")}</p>`);
+        document.writeln(`<p>${parseFloat("15.1kkk")}</p>`);
+        document.writeln(`<p>${parseFloat("11aa")}</p>`);
+        document.writeln(`<p>${Number("15.1")}</p>`);
+        document.writeln(`<p>${Number("15")}</p>`);
+
+        // --Perbedaan antara parseInt/Float dengan number(string)--
+        // Terdapat perbedaan antara penggunaan parseInt/Float dengan Number(string) dmn jika mencetak ("11aa"),
+        // parseInt/Float akan tetap mencetak angka didepan huruf yaitu "11" sedangkan Number(string) akan
+        // mencetak NaN
+
+        //NaN
+        document.writeln(`<p>${Number("aa.1")}</p>`);
+        document.writeln(`<p>${Number("1aaa")}</p>`);
+
+        // isNaN adalah function untuk mengecek apakah variable tsb bersifat NaN atau tidak
+        // Jika variable tsb bersifat Nan maka akan mencetak 'true' dan sebaliknya
+        document.writeln(`<p>${isNaN(a)}</p>`);
+        document.writeln(`<p>${isNaN(b)}</p>`);
+    </script>
+</body>
+</html>

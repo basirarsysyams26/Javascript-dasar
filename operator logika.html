@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Operator logika</title>
+</head>
+<body>
+    <script>
+
+        // Operator &&
+        // True && True = True;
+        // True && False = False;
+        // False && True = False;
+        // False && False = False;
+        let nilaiUjian1 = 90;
+        let nilaiUjian2 = 1;
+        // Variable harus dibuat true or false terlebih dahulu sebelum menggunakan operator &&
+        let lulusUjian1 = nilaiUjian1 >= 75;
+        let lulusUjian2 = nilaiUjian2 >= 75;
+        let result = lulusUjian1 && lulusUjian2;
+        document.writeln(`<p>${result}</p>`);
+
+        // Operator ||
+        // True || True = True
+        // True || False = True;
+        // False || True = True;
+        // False || False = False;
+        let nilaiUjian3 = 90;
+        let nilaiUjian4 = 1;
+        // Variable harus dibuat true or false terlebih dahulu sebelum menggunakan operator ||
+        let lulusUjian3 = nilaiUjian3 >= 75;
+        let lulusUjian4 = nilaiUjian4 >= 75;
+        let result1 = lulusUjian3 || lulusUjian4;
+        document.writeln(`<p>${result1}</p>`);
+
+        
+
+
+
+    </script>
+</body>
+</html>

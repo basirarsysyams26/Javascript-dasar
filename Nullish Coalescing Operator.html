@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Nuallishing Coalesching Operator</title>
+</head>
+<body>
+    <script>
+        // Cara 1
+        let nama ;
+        if(nama === null || nama === undefined){ // False || True = True maka mencetak "Nilai default"
+            document.writeln("Nilai default");
+        }
+                document.writeln("</br>");
+
+
+        // Cara 2
+        let a ;
+        let data = a;
+        if(data === null || data === undefined){
+            data = "default";
+        }
+        document.writeln(data);
+        document.writeln("</br>");
+
+        // Nuallishing Coalesching Operator
+        let parameter ;
+        let data1 = parameter ?? "Nilai default";
+        document.writeln(data1);
+
+        // PERTANYAAN!!
+        // Mengapa pada syntax "let parameter ;
+        // let data1 = parameter ?? "Nilai default";
+        // document.writeln(data1);" 
+        // jika nilai parameternya undefined atau null itu bernilai true sehinnga mencetak "Nilai default" 
+        // tetapi jika bukan bernilai undefined atau null
+        // misal let parameter = 10; akan mencetak 10 dan bukan mencetak "Nilai default"
+
+        // JAWABAN
+        // Pada syntax "let parameter; let data1 = parameter ?? "Nilai default"; document.writeln(data1);",
+        // jika nilai dari parameter adalah undefined atau null, maka ekspresi parameter ?? "Nilai default" 
+        // akan mengembalikan "Nilai default" karena operator nullish coalescing (??) mengembalikan nilai kanan 
+        // jika nilai kiri adalah null atau undefined 
+        // Namun, jika parameter memiliki nilai selain undefined atau null, 
+        // misalnya let parameter = 10;, maka ekspresi parameter ?? "Nilai default" akan mengembalikan 
+        // nilai dari parameter itu sendiri, yaitu 10, karena parameter bukan null atau undefined 
+
+        
+
+
+    </script>
+</body>
+</html>
