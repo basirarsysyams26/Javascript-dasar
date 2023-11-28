@@ -18,7 +18,9 @@
         document.writeln("</br>");
 
         //Undefined Array Value
-        let mahasiswa = [];
+        let mahasiswa = []; // ini adalah array kosong bukan undefined, undefined terjadi jika pada konndisi terminasi diminta mahasiswa.property yg 
+        // tidak dibuat pada variable array, tetapi jika kita hanya mengakses variable arraynya saja tanpa property kosong maka itu bukan undefined
+        // contoh : if (mahasiswa.umur == undefined) = ini akan bernilai undefined jika tidak ada property umur, if (mahasiswa == undefined)= ini bukan undefined tetapi variable array kosong
         if(mahasiswa === undefined){
             document.writeln("undefined");
         }else{
@@ -27,8 +29,8 @@
         document.writeln("</br>");
         
         //Undefined Object Value
-        let mahasiswa_baru = {Name : "Basir", Prodi : "TPL"} ;
-        if(mahasiswa_baru.Name === undefined){
+        let mahasiswa_baru = {} ;
+        if(mahasiswa_baru === undefined){
             document.writeln("undefined");
         }else{
             document.writeln("defined");
