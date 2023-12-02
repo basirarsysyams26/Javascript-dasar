@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    
+    <script>
+        function nama(firstName,lastName = "unknown"){
+            console.info(firstName)
+            console.info(lastName)
+        }
+        nama();
+        nama("budi", "jamil");
+        nama("budi", undefined); // karena undefined maka mengambil parameter unknown
+        nama("budi", null); // knp null tidak mengambil parameter unknown krn null sdh dianggap ada valuenya cmn valuenya kosong
+    </script>
+</body>
+</html>

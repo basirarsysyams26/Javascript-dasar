@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        // Rest parameter adalah fitur dimana kita dapat mengirim data sebanyak2 ny pada sebuah parameter dan scr otomatis akan dikonversi menjadi array
+        // Untuk membuat rest parameter, ada ketentuannya
+        // Rest parameter hanya boleh ada disatu function, tidak boleh lebih dari satu
+        // Rest parameter hanya boleh berada di posisi paling akhir
+        // Rest parameter ditandai dengan ...
+
+        function sum(item, ...data){
+           let total = 0;
+            for(a of data){
+                total += a;
+            }
+            document.writeln(`Andi membeli ${item} sebanyak ${total}`);
+        }
+
+        sum("Jeruk", 1,2,3,4)
+
+        document.writeln("</br>");
+       
+    // function sum(item, ...data){
+    //     let total = 0;
+    //     for(a of data){
+    //         total -= a;
+    //         // total = total a 
+    //     }
+    //     document.writeln(`${item} ${data} Total: ${total}`);
+    // }
+
+    // sum("Jeruk", 1, 2, 3, 4);
+
+    // Spread syntax
+    // Jika kita terlanjur memiliki data berupa array 
+    // kita tetap bisa mengirim array ke rest parameter
+    // kita bisa gunakan ...(titik tiga kali) diikuti dengan array ny ketika menggil function
+
+    function sum(item, ...data){
+           let total = 0;
+            for(a of data){
+                total += a;
+            }
+            document.writeln(`Andi membeli ${item} sebanyak ${total}`);
+        }
+
+       let d = [10,10,10];
+    //    sum("Jeruk", d) // hasilnya Andi membeli jeruk sebanyak 010,10,10 itu bukanlah hasil yg diharapkan
+       // hasil yg diharapkan adalah andi membeli Jeruk sebanyak 30
+
+       sum ("jeruk", ...d) // spread syntax yg benar
+       
+    
+    </script>
+</body>
+</html>

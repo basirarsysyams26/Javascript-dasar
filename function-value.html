@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+
+        //Function didalam variable
+
+        function sayHello(name){
+            document.writeln(`<p> Hai ${name} </p>`);
+        }
+
+        
+        sayHello( "asep")// cara 1 memanggil function sayHello
+      
+        let go = sayHello; // variable go sm dgn function sayHello
+        go( "arsy") // cara 2 memanggil function sayHello
+
+        // Function di parameter
+
+        function giveMeName(callback){
+            callback("mamah");
+        }
+        giveMeName(sayHello);
+        // giveMeName = sayHello; // ini jatuhnya giveMeName bukan sebagai function tetapi sebgai variable
+        sayHello(giveMeName);
+       
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+
+        // function tambahkanDua(angka){
+        //     let hasil = angka + 2;
+        //     return hasil;
+        // }
+        // let hasilPembahasan = tambahkanDua(5);
+        // document.writeln(hasilPembahasan); // 7
+       
+        // function tambahkanDua(angka){
+        //     document.writeln(angka + 2);
+        // }
+        // tambahkanDua(5);
+
+        // function sayHello(angka){
+        //     if( angka > 90){
+        //         return "A";
+        //     }else if(angka > 80){
+        //         return "B";
+        //     }else{
+        //         return "C";
+        //     }
+        // }
+
+        // let result = sayHello(99);
+        // document.writeln(result);
+
+        function isContains(array, searchValue){
+            for(let element of array){
+                console.info(`ini adalah iterasi ${element}`)
+                if(element === searchValue){
+                    return true;
+                } 
+            }
+            return false;
+        }
+
+        let array = [1,2,3,4]; // cara 1
+        let searchValue = 3; // cara 1
+        let result = isContains(array, searchValue) // cara 1
+        // let result = isContains([1,2,3],1) // cara 2
+        document.writeln(result);
+
+        
+    </script>
+</body>
+</html>
