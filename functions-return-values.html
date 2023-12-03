@@ -3,7 +3,7 @@
 </head>
 <body>
     <script>
-
+        //---SOAL---
         // function tambahkanDua(angka){
         //     let hasil = angka + 2;
         //     return hasil;
@@ -16,35 +16,64 @@
         // }
         // tambahkanDua(5);
 
-        // function sayHello(angka){
-        //     if( angka > 90){
-        //         return "A";
-        //     }else if(angka > 80){
-        //         return "B";
-        //     }else{
-        //         return "C";
-        //     }
-        // }
+        //---SOAL--
+        function go(angka){
+            if(angka % 2 == 0){
+                return true;
+            }else{
+                return false;
+            }
+        } 
+        let variable = go(4);
+        document.writeln(`<p>${variable}</p>`);
 
-        // let result = sayHello(99);
-        // document.writeln(result);
-
+        // Latihan 
         function isContains(array, searchValue){
             for(let element of array){
-                console.info(`ini adalah iterasi ${element}`)
-                if(element === searchValue){
+                if(element == searchValue){
                     return true;
                 } 
             }
             return false;
+        }   
+        let a = isContains([1,2,3,4], 5)
+        document.writeln(`<p>${a}</p>`);
+        // Mengapa code Latihan menghasilkan nilai false padahal seharusnya bernilai true, karena pernyataan  return pd blok if akan mengakhiri
+        // fungsi ketika satu elemen dicek, apakah sama dengan search value atau tidak, 1 tidak sm dgn 4 maka hasil false langsung tercetak
+        // tidak dilanjutkan hingga iterasi ke 4 yaitu 4==4,  Sehingga, fungsi akan selalu mengembalikan hasil pada iterasi pertama, entah itu true atau false.
+        // Solusi untuk mengecek keseluruhan array sebelum mengembalikan nilai adalah dengan memindahkan pernyataan return false di luar loop setelah iterasi selesai
+        // Dengan demikian, fungsi akan mencari nilai yang sama dengan searchValue dalam seluruh array. Jika ditemukan satu elemen yang sesuai, fungsi akan 
+        // langsung mengembalikan true. Jika tidak ada elemen yang cocok setelah seluruh iterasi, barulah fungsi mengembalikan false.
+
+        
+
+        // ---SOAL---
+        // function isContains(array, searchValue){
+        //     for(let element of array){
+        //         console.info(`ini adalah iterasi ${element}`)
+        //         if(element === searchValue){
+        //             return true;
+        //         } 
+        //     }
+        //     return false;
+        // } = [1,2,3,4
+
+        // let array[]; // cara 1
+        // let searchValue = 3; // cara 1
+        // let result = isContains(array, searchValue) // cara 1
+        // // let result = isContains([1,2,3],1) // cara 2
+        // document.writeln(result);
+
+        // ---SOAL---
+        function tambah(angka){
+            let hasil = angka + 2;
+            document.writeln(hasil);
+            return hasil; // segala sesuatu yang ada setelah return tidak akan dicetak, krn return menghentikan eksekusi yg ada difungsi
+           
         }
-
-        let array = [1,2,3,4]; // cara 1
-        let searchValue = 3; // cara 1
-        let result = isContains(array, searchValue) // cara 1
-        // let result = isContains([1,2,3],1) // cara 2
-        document.writeln(result);
-
+        tambah(2)
+    //    let hasilPenambahan = tambah(2);
+    //    document.writeln(hasilPenambahan);
         
     </script>
 </body>
