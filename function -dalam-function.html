@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        function outer(){
+            let outerVariable = "Halo basir";
+            
+            function inner(){
+                document.writeln(outerVariable);
+            }
+            inner();
+        }
+        outer();
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        // Anonymus function didalam variabel
+        let say = function (name){
+            document.writeln(name)
+        }
+        say("basir")
+        document.writeln("</br>");
+
+        // Anonymus function didalam parameter
+        function giveMeName(callback){
+            callback("mamah")
+        }
+        giveMeName(function(nama) {
+            document.writeln(nama);
+        })
+
+
+       
+    </script>
+</body>
+</html>
