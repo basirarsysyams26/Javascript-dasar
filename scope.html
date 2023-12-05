@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        // ---Variable Global Scope---
+        let globalVariable ="Halo ini global variable"
+        function a (){
+            document.writeln(`<p>${globalVariable}</p>`);
+        }
+        a();
+
+        //---Local Scope---
+        function localFungsi(){
+            let localVariable = "Halo ini local variable"
+            document.writeln(`<p>${localVariable}</p>`);
+        }
+        localFungsi();
+
+        //---Lexical Scope (Nested Scope)
+        
+
+
+
+    </script>
+</body>
+</html>

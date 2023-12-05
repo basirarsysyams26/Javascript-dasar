@@ -23,8 +23,24 @@
         }
         giveMeName(sayHello);
         // giveMeName = sayHello; // ini jatuhnya giveMeName bukan sebagai function tetapi sebgai variable
-        sayHello(giveMeName);
        
+       
+        //---Function sebgai variable---
+        // contoh 1
+        function a(c,d){
+            let f = c+d;
+            return f;
+        }
+        let b = a(2,2);
+        document.writeln(`<p>${b}</p>`);
+        // contoh 2
+        let x = function y (angka1, angka2){
+            return angka1 + angka2;
+        }
+        let z = x(10,10); // TIdak bisa memanggil y(10,10) karena fungsi y terdapat didalam variable x
+        document.writeln(z);
+       
+    
 
       
     </script>
