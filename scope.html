@@ -18,6 +18,19 @@
         localFungsi();
 
         //---Lexical Scope (Nested Scope)
+
+        function outer(){
+            function inner(){
+                let x = "Ini local variable didalam fungsi inner"
+                document.writeln( `<p>${x}</p>`);
+                document.writeln(`<p>${y}</p>`);
+            }
+            let y = "Ini global variable didalam fungsi outer"
+            inner();
+        }
+        outer();
+        
+        document.writeln(y); // variable y hanya bersifat global untuk fungsi outer dan inner 
         
 
 
