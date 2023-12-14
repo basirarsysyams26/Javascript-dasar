@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        function recursive(n){
+            if(n === 0 || n === 1){
+                return 1;
+            }else{
+                return n * recursive(n-1)
+            }
+        }
+        console.info(recursive(5));
+    </script>
+</body>
+</html>

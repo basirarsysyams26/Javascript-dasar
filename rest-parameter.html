@@ -8,16 +8,15 @@
         // Rest parameter hanya boleh ada disatu function, tidak boleh lebih dari satu
         // Rest parameter hanya boleh berada di posisi paling akhir
         // Rest parameter ditandai dengan ...
-
         function sum(item, ...data){
-           let total = 0;
+            let total = 2;
             for(a of data){
-                total += a;
+                total += a; 
             }
             document.writeln(`Andi membeli ${item} sebanyak ${total}`);
         }
 
-        sum("Jeruk", 1,2,3,4)
+        sum("Jeruk", 10, 10);
 
         document.writeln("</br>");
        
