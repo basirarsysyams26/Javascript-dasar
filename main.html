@@ -14,6 +14,26 @@
       document.writeln(a + " " + b);
 
       document.writeln("testing");
+
+      var x = "1";
+      x++;
+      document.writeln(x);
+      document.writeln("</br>");
+
+      let y = "Mencoba";
+      let z = "tanda koma";
+      document.writeln(y + "," + z);
+      document.writeln("</br>");
+
+      function isContains(search, ...data) {
+        total = 0;
+        for (let element of data) {
+          total += element;
+        }
+        document.writeln(total);
+      }
+
+      isContains("jeruk", 10, 10);
     </script>
   </body>
 </html>

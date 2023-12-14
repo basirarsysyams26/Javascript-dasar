@@ -39,9 +39,28 @@
         }
         let z = x(10,10); // TIdak bisa memanggil y(10,10) karena fungsi y terdapat didalam variable x
         document.writeln(z);
-       
-    
+        
+        function sayHello(name) {
+        document.writeln(`<p>Hallo ${name}</p>`);
+        }
 
+        sayHello("arsy");
+        let say = sayHello;
+        say("syams");
+
+        function giveMeName(callback) {
+            callback("basir"); //calback function
+        }
+
+        giveMeName(sayHello);
+        sayHello(giveMeName); 
+        // Mengapa sayHello(giveMeName) tidak menhasilkan output yang sama dengan giveMeName(sayHello)
+        // karena sayHello memanggil giveMeName sebagai name, dimanaa giveMeName itu tidak sama dengan name
+        // giveMeName adalah sebuah fungsi sedangkan name adalah sebuah paramater.
+        // Parameter adalah variable yang dideklarasikan pada fungsi.
+        // Sedankan ketika kita memanggil giveMeName(sayHello), giveMeName memanggil sayHello untuk menggantikan atau sebagai callback
+        // yang dimana callback tsb bersifat function, nah karena calback dan sayHello sama2 bersifat function
+        // jadi sayHello = callback 
       
     </script>
 </body>

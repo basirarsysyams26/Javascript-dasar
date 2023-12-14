@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+    // function tambah(a, b) {
+    // return a + b;
+    // }
+
+    // var hasil = tambah(2, 3); // Pemanggilan fungsi tambah dengan argumen 2 dan 3
+    // document.writeln(hasil); // Output: 5
+
+    // function tambah(a, b) {
+    // document.writeln(a + b);
+    // }
+
+    // var hasil = tambah(2, 3);
+    // console.log(hasil); // Output: undefined
+
+    // function tambah(a, b) {
+    // document.writeln(a + b);
+    // }
+
+    // tambah(2,3);
+
+    // function say(name, umur="16"){
+    //     document.writeln(`${name}${umur}`);
+    // }
+    // say("basir")
+
+    function sum(name, ...data){
+       let total = 0
+        for(element of data){
+            total = element + total //mengapa jika saya menambahkan let pada total itu error
+        }
+        document.writeln(total);
+    }
+    sum("jeruk", 2,3,4,5)
+    // sum("jeruk", ...[2,3,4,5]) // Ini disebut dengan spread syntax
+
+    
+
+    </script>
+</body>
+</html>
