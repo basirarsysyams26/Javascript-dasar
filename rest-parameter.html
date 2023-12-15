@@ -10,8 +10,8 @@
         // Rest parameter ditandai dengan ...
         function sum(item, ...data){
             let total = 2;
-            for(a of data){
-                total += a; 
+            for(x of data){
+                total = total + x ; 
             }
             document.writeln(`Andi membeli ${item} sebanyak ${total}`);
         }
@@ -36,31 +36,31 @@
     // kita tetap bisa mengirim array ke rest parameter
     // kita bisa gunakan ...(titik tiga kali) diikuti dengan array ny ketika menggil function
 
-    function sum(item, ...data){
-           let total = 0;
-            for(a of data){
-                total += a;
-            }
-            document.writeln(`Andi membeli ${item} sebanyak ${total}`);
-        }
+    // function sum(item, ...data){
+    //        let total = 0;
+    //         for(a of data){
+    //             total += a;
+    //         }
+    //         document.writeln(`Andi membeli ${item} sebanyak ${total}`);
+    //     }
 
-       let d = [10,10,10];
+    //    let d = [10,10,10];
     //    sum("Jeruk", d) // hasilnya Andi membeli jeruk sebanyak 010,10,10 itu bukanlah hasil yg diharapkan
        // hasil yg diharapkan adalah andi membeli Jeruk sebanyak 30
 
        sum ("jeruk", ...d) // spread syntax yg benar
 
        // Latihan 
-       document.writeln("</br>");
+    //    document.writeln("</br>");
 
-       function data(...angka){
-        for(a of data){
-            let hasil = a + 1;
-            return hasil;
-        }
-       }
-      let penjumlahan = data([1,2,3,4]);
-       document.writeln(penjumlahan);
+    //    function data(...angka){
+    //     for(a of data){
+    //         let hasil = a + 1;
+    //         return hasil;
+    //     }
+    //    }
+    //   let penjumlahan = data([1,2,3,4]);
+    //    document.writeln(penjumlahan);
        
     
     </script>

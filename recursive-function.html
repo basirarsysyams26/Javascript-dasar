@@ -3,11 +3,25 @@
 </head>
 <body>
     <script>
+
+        //--Factorial Loop--//
+        function factorialLoop(x){
+            let result = 1;
+            for(let i = 1 ; i <= x ; i++){
+              result = result * i 
+            }
+            return result;
+        }
+        let hasil = factorialLoop(5);
+        document.writeln(hasil);
+
+        //--Recursive Function--//
+        // Recursive Function adalah kemampuan function memanggil function dirinya sendiri
         function recursive(n){
             if(n === 0 || n === 1){
-                return 1;
+                return n *1;
             }else{
-                return n * recursive(n-1)
+                return n * recursive(n-1)// 5 * 4 = 20 , 20 * 3 = 60, 60 * 2 = 120, 120 * 1 = 120
             }
         }
         console.info(recursive(5));
