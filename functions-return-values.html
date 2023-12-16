@@ -4,42 +4,43 @@
 <body>
     <script>
         //---SOAL---
-        function tambahkanDua(angka){
-            let hasil = angka + 2;
-            return hasil;
-        }
-        let hasilPembahasan = tambahkanDua(5);
-        document.writeln(hasilPembahasan); // 7
-        document.writeln("</br>");
+        // function tambahkanDua(angka){
+        //     let hasil = angka + 2;
+        //     return hasil;
+        // }
+        // let hasilPembahasan = tambahkanDua(5);
+        // document.writeln(hasilPembahasan); // 7
+
+        // document.writeln("</br>");
        
-        function tambahkanDua(angka){
-            document.writeln(angka + 2);
-        }
-        tambahkanDua(5);
-        document.writeln("</br>");
+        // function tambahkanDua(angka){
+        //     document.writeln(angka + 2);
+        // }
+        // tambahkanDua(5);
+        // document.writeln("</br>");
 
-        //---SOAL--
-        function go(angka){
-            if(angka % 2 == 0){
-                return true;
-            }else{
-                return false;
-            }
-        } 
-        let variable = go(4);
-        document.writeln(`<p>${variable}</p>`);
+        // //---SOAL--
+        // function go(angka){
+        //     if(angka % 2 == 0){
+        //         return true;
+        //     }else{
+        //         return false;
+        //     }
+        // } 
+        // let variable = go(4);
+        // document.writeln(`<p>${variable}</p>`);
 
-        // Latihan 
-        function isContains(array, searchValue){
-            for(let element of array){
-                if(element == searchValue){
-                    return true;
-                } 
-            }
-            return false;
-        }   
-        let a = isContains([1,2,3,4], 5)
-        document.writeln(`<p>${a}</p>`);
+        // // Latihan 
+        // function isContains(array, searchValue){
+        //     for(let element of array){
+        //         if(element == searchValue){
+        //             return true;
+        //         } 
+        //     }
+        //     return false;
+        // }   
+        // let a = isContains([1,2,3,4], 5)
+        // document.writeln(`<p>${a}</p>`);
         // Mengapa code Latihan menghasilkan nilai false padahal seharusnya bernilai true, karena pernyataan  return pd blok if akan mengakhiri
         // fungsi ketika satu elemen dicek, apakah sama dengan search value atau tidak, 1 tidak sm dgn 4 maka hasil false langsung tercetak
         // tidak dilanjutkan hingga iterasi ke 4 yaitu 4==4,  Sehingga, fungsi akan selalu mengembalikan hasil pada iterasi pertama, entah itu true atau false.

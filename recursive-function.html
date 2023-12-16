@@ -5,26 +5,65 @@
     <script>
 
         //--Factorial Loop--//
-        function factorialLoop(x){
-            let result = 1;
-            for(let i = 1 ; i <= x ; i++){
-              result = result * i 
-            }
-            return result;
-        }
-        let hasil = factorialLoop(5);
-        document.writeln(hasil);
+        // function factorialLoop(x){
+        //     let result = 1;
+        //     for(let i = 1 ; i <= x ; i++){
+        //       result = result * i 
+        //     }
+        //     return result;
+        // }
+        // let hasil = factorialLoop(5);
+        // document.writeln(hasil);
 
         //--Recursive Function--//
         // Recursive Function adalah kemampuan function memanggil function dirinya sendiri
         function recursive(n){
             if(n === 0 || n === 1){
-                return n *1;
+                return 1;
             }else{
-                return n * recursive(n-1)// 5 * 4 = 20 , 20 * 3 = 60, 60 * 2 = 120, 120 * 1 = 120
+                return n * recursive(n-1) 
             }
         }
-        console.info(recursive(5));
+        
+
+        // recrusive 5 = 5 * recrusive(4)
+        // recrusive 4 = 4 * recrusive(3)
+        // recrusive 3 = 3 * recrusive(2)
+        // recrusive 2 = 2 * recrusive(1)
+        // recrusive 1 = 1
+        
+
+        // return 3 * recursive(2) + 1 = 7 
+        // return 7 * recursive (1) + 1 = 8
+        // return 8 + 1 +1 
+
+        //recrusive 3 = 3 * recrusive(2) + 1
+        // recrusive 2 = 2 * recrusive(1) + 1
+        // recrusive 1 = 1
+
+        // recrusive 4 = 4 * recrusive(3) + 1
+        // recrusive 3 = 3 * recrusive(2) + 1
+        // recrusive 2 = 2 * recrusive(1) + 1
+        // recrusive 1 = 1
+
+        // return 4 * recursive (3) + 1 = 13
+        // return 13 * recursive (2) + 1 = 27
+        // return 27 * recursive (1) + 1 = 28
+        // return 28 + 1 + 1 = 30
+
+        // return 5 * recursive(4)
+        //return 5 * 4 * recursive(3)
+        // return 5 * 4 * 3 * recursive(2)
+        // return 5 * 4 * 3 * 2 * recursive (1)
+        // 120 * 1
+    //   let y = recursive;
+    //   document.writeln(y(5)); // cara 1 untuk mencetak fungsi jika didalam fungsi tsb ada return
+
+      let y = recursive(5)
+      document.writeln(y); // cara 2 untuk mencetak fungsi jika didalam fungsi tsb ada return
+
+    //   document.writeln(recursive(5)); // cara 3 untuk mencetak fungsi jika didalam fungsi tsb ada return
+
     </script>
 </body>
 </html>
