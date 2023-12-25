@@ -4,12 +4,11 @@
 <body>
     <script>
         //---SOAL---
-        // function tambahkanDua(angka){
-        //     let hasil = angka + 2;
-        //     return hasil;
-        // }
-        // let hasilPembahasan = tambahkanDua(5);
-        // document.writeln(hasilPembahasan); // 7
+    //     function tambahkanDua(angka){
+    //         let hasil = angka + 2;
+    //         return hasil;
+    //     }
+    //   document.writeln(tambahkanDua(5)); // 7
 
         // document.writeln("</br>");
        
@@ -69,15 +68,55 @@
 
         // ---SOAL---
         function tambah(angka){
+            
             let hasil = angka + 2;
             document.writeln(hasil);
-            return hasil; // segala sesuatu yang ada setelah return tidak akan dicetak, krn return menghentikan eksekusi yg ada difungsi
+            
+            // return hasil; // segala sesuatu yang ada setelah return tidak akan dicetak, krn return menghentikan eksekusi yg ada difungsi
            
         }
-        tambah(2)
-    //    let hasilPenambahan = tambah(2);
-    //    document.writeln(hasilPenambahan);
-        
+
+        // tambah(2) // menjalankan perintah document.writeln
+        // let hasil hasilPenambahan = tambah(2) //menjalankan perintah document.writeln
+
+    //    let hasilPenambahan = tambah(2); 
+    //    document.writeln(hasilPenambahan); // dua syntax ini menjalankan perintah return
+
+       document.writeln(tambah(2)) // ini menjalankan perintah document.writeln dan return sehingga menghasilkan dua output berupa nilai 4 4
+       // ketika kita mengeksekusi document.writeln(tambah(2)) dengan kondisi returnrn hasil dimatikan atau dikomen itu outputnya adalah
+       // 4 undefined, mengapa menhasilkan dua output yaitu 4 dan undefined krn dari code document.writeln(tambah(2)) itu dipecah menjadi:
+       // tambah(2) dan document.writeln() itu sendiri jadi output nya. berikut saya berikan contoh lain yang serupa dibawah iini:
+
+    //    let person = {
+    //     firstName : "Basir",
+    //     lastName : "Syams",
+    //     get fullName(){ 
+    //        return `${this.firstName} ${this.lastName}`;
+    //     },
+    //     set fullName(value){
+    //       console.info(value)
+    //     }
+    //    }
+
+    //    person.fullName = "Basir Arsy Syams"
+    //    console.info(person.fullName = "Basirrrr") // Disini output yang dihasilkan ada dua yaitu Basirrrr dan Basirrrr sama dgn yang diatas
+
+       
+    //    let person = {
+    //     firstName : "Basir",
+    //     lastName : "Syams",
+    //     get fullName(){ 
+    //        return `${this.firstName} ${this.lastName}`;
+    //     },
+    //     set fullName(value){
+    //        return `Ubah full name menjadi ${value}`;
+    //     }
+    //    }
+
+       
+    //    console.info(person.fullName = "basirarsy")
+    //    console.table(person)
+   
     </script>
 </body>
 </html>

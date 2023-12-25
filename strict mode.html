@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        'use strict'
+        var x = "basir";
+        console.info(x)
+
+        function useStrictMode(){
+            let person = {
+                firstNames : "Basir"
+            }
+            with(person){
+                console.info(firstNames)
+            }
+        }
+        useStrictMode();
+    </script>
+</body>
+</html>

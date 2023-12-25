@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        // Code menggunakan document.writeln()
+    //    let person = {
+    //     firstName : "Basir",
+    //     lastName : "Syams",
+    //     get fullName(){ 
+    //         document.writeln(`${this.firstName} ${this.lastName}`);
+    //     }
+    //    }
+
+    //   person.fullName;
+      
+      // Code menggunakan return
+    //    let person = {
+    //     firstName : "Basir",
+    //     lastName : "Syams",
+    //     get fullName(){ 
+    //        return `${this.firstName} ${this.lastName}`;
+    //     }
+    //    }
+    //    console.info(person.fullName)
+       // mengapa tidak person.fullName() krn fullName disitu bukan function lagi tetapi bagian properti,buktinya 
+       // tidak ada tulisan function fullName
+
+    //    let person = {
+    //     firstName : "Basir",
+    //     lastName : "Syams",
+    //     get fullName(){ 
+    //        return `${this.firstName} ${this.lastName}`;
+    //     },
+    //     set fullName(value){
+    //        return `Ubah full name menjadi ${value}`;
+    //     }
+    //    }
+    //    let a = person.fullName = "Basir arsy"
+    //    document.writeln(a);
+    //    document.writeln(person.fullName = "Basir ganteng124");
+
+    //    let person = {
+    //     firstName : "Basir",
+    //     lastName : "Syams",
+    //     get fullName(){ 
+    //        return `${this.firstName} ${this.lastName}`;
+    //     },
+    //     set fullName(value){
+    //       console.info(value)
+    //     }
+    //    }
+
+    //    person.fullName = "Basir Arsy Syams"
+    //    console.info(person.fullName = "Basirrrr")
+
+    //    let person = {
+    //     firstName : "Basir",
+    //     lastName : "Syams",
+    //     get fullName(){ 
+    //        return `${this.firstName} ${this.lastName}`;
+    //     },
+    //     set fullName(value){
+    //        return `Ubah full name menjadi ${value}`;
+    //     }
+    //    }
+
+       
+    //    console.info(person.fullName = "basirarsy")
+    //    console.table(person)
+
+       let person = {
+        firstName : "Basir",
+        lastName : "Syams",
+        get fullName(){ 
+           return `${this.firstName} ${this.lastName}`;
+        },
+        set fullName(value){
+            let x = value.split(" "); //Hasilnya adalah array yang berisi elemen-elemen yang dipisahkan oleh spasi.
+            //Contoh: Jika value adalah "Irma Rianti", maka hasilnya akan menjadi ["Irma", "Rianti"]. let x = ["Irma","Rianti"]
+            this.firstName = x[0] // Ini artinya this.firstName = Irma
+            this.lastName = x[1] // Ini artinya this.lastName = Rianti
+        }
+       }
+
+       person.fullName = "Irma Rianti"; 
+    //    Menetapkan nilai "Irma Rianti" pada properti virtual fullName menggunakan setter. Ini mengakibatkan pemanggilan setter fullName yang 
+    //    membagi string "Irma Rianti" menjadi array ["Irma", "Rianti"] dan mengatur nilai firstName dan lastName sesuai dengan elemen-elemen array
+    //    tersebut.
+       console.info(person.fullName)
+       console.table(person)
+       
+       // Jadi, perbedaan utama dari value.split(" ") dan value.split("") terletak pada karakter yang digunakan untuk memisahkan string. 
+       // split(" ") memisahkan berdasarkan spasi, sedangkan split("") memisahkan setiap karakter dalam string. 
+       
+       [irma,rianti]
+       x[0] = irma
+       x[1] = rianti
+       thisfir
+      
+      
+
+
+
+       
+
+    </script>
+</body>
+</html>

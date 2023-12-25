@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        function createAdder(value){
+            let owner = "Basir";
+            function add(param){
+                return value + param;
+            }
+            return add;
+        }
+        let addTwo = createAdder(2);
+        console.info(addTwo(10))
+
+        // ketika Anda memanggil addTwo(0), nilai 0 yang Anda lewatkan menjadi nilai dari parameter param,
+        //  bukan parameter value. Sebenarnya, nilai value sudah ditetapkan saat fungsi createAdder(2) dijalankan. 
+        //  Jadi, ketika Anda memanggil addTwo(0), Anda sedang menambahkan 2 (nilai value yang telah ditetapkan sebelumnya) 
+        //  dengan 0 (parameter param yang Anda lewatkan).
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+        let sayHello = (name)=>{
+            console.info(name);
+        }
+        sayHello("Basir")
+
+        //--Arrow Function Tanpa Blok--//
+        let a = (name) => console.info(name);
+        sayHello("ujang")
+
+        // let sum = (first, second)=>{
+        //     return first + second
+        // }
+
+        let sum = (first, second) => first + second;
+        console.info(sum(100,100))
+
+        function giveMeName(callback){
+            callback("Basir")
+        }
+        giveMeName(name => console.info(`Halo ${name}`)  )
+   
+    </script>
+</body>
+</html>

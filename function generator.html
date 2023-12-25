@@ -1,34 +1,85 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <head>
 </head>
 <body>
     <script>
 
         //--Function Generator Sederhana--//
-        function* generator(){
-            yield 1;
-            yield 2;
-            yield 3;
-        }
-        let x = generator();
-        for (let name of x) {
-            document.writeln(name);
-        }
-        document.writeln("</br>");
+        // function* generator(){
+        //     yield 1;
+        //     yield 2;
+        //     yield 3;
+        // }
+        // let x = generator();
+        // for (let name of x) {
+        //     document.writeln(name);
+        // }
+        // document.writeln("</br>");
 
-        //--Function Generator Kompleks--//
-        function* a(value){
-            for(let i = 1; i <= value ; i++){
-               if(i % 2 == 1){
-                yield i;
-               }
+        // --Function Generator Kompleks--//
+        function* buatGanjil(value){
+            for(let i = 1 ; i <= value ; i++ ){
+                if(i % 2 == 1){
+                   yield i;
+                }
             }
         }
-        let b = a(10);
-        for (let c of b) {
-            document.writeln(c);
+        let angkaGanjil = buatGanjil(100);
+        for (let angka of angkaGanjil) {
+            console.info(angka);
         }
-      
+        document.writeln("</br>");
+        // function* buatGanjil(value){
+        //     for(let i = 1 ; i <= value ; i++ ){
+        //         if(i % 2 == 1){
+        //            console.info(i);
+        //         }
+        //     }
+        // }
+        // let angkaGanjil = buatGanjil(100);
+        // for(angka of angkaGanjil){
+        //     console.info(angka);
+        // }
+
+        // Jika Anda mencetak nilai menggunakan console.info(i),
+        // itu hanya mencetak nilai ke konsol dan melanjutkan eksekusi tanpa memberhentikan generator. 
+        //Dengan yield i, generator memberhentikan eksekusi sementara dan menunggu pemanggil untuk meminta nilai berikutnya.
+        // Kesimpulannya, jika tujuan Anda hanya mencetak nilai ke konsol dan Anda tidak memerlukan fitur-fitur khusus generator,
+        // menggunakan console.info(i) mungkin tidak menimbulkan masalah besar. Namun, jika Anda ingin memanfaatkan fitur-fitur generator
+        // dan bekerja dengan iterator, yield i akan menjadi pilihan yang lebih sesuai.
+        // Generator functions adalah tipe khusus dari function di JavaScript yang memungkinkan Anda menghentikan eksekusi fungsi sementara
+        // dan melanjutkannya nanti. Ini memungkinkan Anda membuat iterator secara mudah dan memberikan kontrol yang lebih baik atas proses iterasi. 
+        // Keyword yield digunakan dalam generator functions untuk mengembalikan nilai dan memberhentikan eksekusi sementara.
+
+        //--Lazy Evaluation (lazy)--//
+    //   function* a(value){
+    //     for(let b = 1 ; b <= value ; b++){
+    //         if( b % 2 == 1){
+    //             console.info(`Yield ${b}`)
+    //             yield b;
+    //         }
+    //     }
+    //   }
+    //   let c = a(100)
+    //   for( d of c){
+    //     console.info(d);
+    //   }
+     
+    //--Array (eager)--//
+    // function aArray(value){
+    //     let result = [];
+    //     for(let b = 1 ; b <= value ; b++){
+    //         if( b % 2 == 1){
+    //            console.info(b);
+    //             result.push(b);
+    //         }
+    //     }
+    //   }
+    //   let c = aArray(100)
+    //   for( d of c){
+    //     console.info(d);
+    //   }
+  
     </script>
 </body>
 </html>

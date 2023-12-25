@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+    <script>
+
+        {
+            let names = ["Basir", "Arsy", "Syams", "Irma", "Rianti"];
+            let firstNames = names[0];
+           let  middleNames = names[1];
+           let lastNames = names[2];
+           let others = names[3]
+            console.info(firstNames);
+            console.info(middleNames);
+            console.info(lastNames);
+            console.info(others);
+        }
+
+        // Destructing Array //
+        {
+            let names = ["Basir", "Arsy", "Syams", "Irma", "Rianti"];
+            let [firstNames, middleNames, lastNames, ...others] = names;
+            console.info(firstNames);
+            console.info(middleNames);
+            console.info(lastNames);
+            console.info(others)
+        }
+
+        // Mengambil data di object //
+        {
+            let person = {
+                names: "Basir",
+                addres: {
+                    city: "Bekasi",
+                    street: "Pondok Ungu Permai"
+                },
+                hobby: "Olahraga"
+            }
+            let x = person.hobby;
+            console.info(x);
+        }
+
+        // Destructuring Object //
+        {
+            let person = {
+                names: "Basir",
+                addres: {
+                    city: "Bekasi",
+                    street: "Pondok Ungu Permai"
+                },
+                hobby: "Olahraga"
+            }
+            let {names, addres, hobby} = person;
+            console.info(hobby)
+            console.info(addres)
+           
+        }
+
+        // Destructuring Nested Object //
+        {
+            let person = {
+                names: "Basir",
+                addres: {
+                    city: "Bekasi",
+                    street: "Pondok Ungu Permai"
+                },
+                hobby: "Olahraga"
+            }
+            let {names, addres:{city, street}, hobby} = person;
+            console.info(hobby)
+            console.info(city)
+        }
+
+        // Function parameter object //
+       {
+
+        function displayNames(person){
+            console.info(person.firstNames)
+            console.info(person.middleNames)
+            console.info(person.lastNames)
+        }
+        let person = {
+            firstNames: "Asep",
+            middleNames: "Mulyadi",
+            lastNames: "Junaidi"
+        }
+        displayNames(person)
+
+       }
+
+        // Destructuring di function parameter (1) //
+        {
+
+            function displayNames({firstNames, middleNames, lastNames}){
+                console.info(firstNames)
+                console.info(middleNames)
+                console.info(lastNames)
+            }
+            let person = {
+                firstNames: "Agus",
+                middleNames: "Joko",
+                lastNames: "Jali"
+            }
+            displayNames(person)
+            
+        }
+        
+        {
+            function sum(Array){
+                return Array[0] + Array[1]
+            }
+            console.info(sum([1,2]))
+        }
+
+        {
+            function sum([first, middle]){
+                return first + middle
+            }
+            console.info(sum([1,3]))
+        }
+
+        // Default value destructuring array //
+        {
+            const names = ["Ujang", "Kakang"];
+            const [firstNames = "Yusuf", middleNames, lastNames = "Pandu"] = names;
+            console.info(firstNames);
+            console.info(middleNames);
+            console.info(lastNames);
+        }
+
+        // Default value destructuring object //
+        {
+            let person = {
+                firstNames: "Alif",
+                lastNames: "Vidi"
+            }
+                
+            let {firstNames, middleNames = "wicaksono", lastNames} = person
+            console.info(firstNames);
+            console.info(lastNames);
+            console.info(middleNames)
+        }
+    
+      
+    </script>
+</body>
+</html>

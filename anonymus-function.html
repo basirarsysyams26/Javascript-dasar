@@ -4,19 +4,25 @@
 <body>
     <script>
         // Anonymus function didalam variabel
-        let say = function (name){
-            document.writeln(name)
-        }
-        say("basir")
-        document.writeln("</br>");
+        // let say = function (name){
+        //     document.writeln(name)
+        // }
+        // say("basir")
+        // document.writeln("</br>");
 
         // Anonymus function didalam parameter
-        function giveMeName(callback){
+        function giveMeName(callback, jamet){
             callback("mamah")
+            jamet("papah")
         }
-        giveMeName(function(nama) {
-            document.writeln(nama);
-        })
+        giveMeName(
+        function(namaMamah) {
+            document.writeln(`halo ${namaMamah}`);
+        },
+        function(namaPapah){
+            document.writeln(`halo ${namaPapah}`);
+        }
+        )
 
 
        
